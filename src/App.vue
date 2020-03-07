@@ -36,8 +36,8 @@
                     id="input-cardnumber"
                     placeholder="#### #### #### ####"
                   >
-                  <span v-if="cardNumber === '' && isValidCardNumber === false" class="err-message">Невірна картка</span>
                   <label class="input-label" for="input-cardnumber">Номер картки</label>
+                  <span v-if="cardNumber === '' && isValidCardNumber === false" class="err-message">Невірна картка</span>
                 </div>
                 <div class="input-wrapper">
                   <input
@@ -47,8 +47,8 @@
                     id="input-validity"
                     placeholder="MM / PP"
                   >
-                  <span v-if="cardExpiry === '' && isValidCardExpiry === false" class="err-message">Невірний термін</span>
                   <label class="input-label" for="input-validity">Термін дії</label>
+                  <span v-if="cardExpiry === '' && isValidCardExpiry === false" class="err-message">Невірний термін</span>
                 </div>
               </div>
               <div class="input-group input-group--second">
@@ -59,7 +59,6 @@
                     id="input-cardowner"
                     placeholder="CARDHOLDER NAME"
                   >
-                  <span v-if="cardOwner === '' && isValidCardOwner === false" class="err-message">Введіть ПІБ власника картки</span>
                   <label class="input-label input-label--tooltip input-label--cardowner" for="input-cardowner">
                     <span>Власник картки</span>
                     <span class="tooltip-wrapper">
@@ -78,7 +77,7 @@
                       <span class="tooltip-hidden tooltip-hidden--name">Прізвище та ім'я людини, на які випущена картка. Для іменних карт - нанесено на карту.</span>
                     </span>
                   </label>
-
+                  <span v-if="cardOwner === '' && isValidCardOwner === false" class="err-message">Введіть ПІБ власника картки</span>
                 </div>
                 <div class="input-wrapper">
                   <input
@@ -89,7 +88,6 @@
                     placeholder="XXX"
                     maxlength="3"
                   >
-                  <span v-if="cardCvv === '' && isValidCardCvv === false" class="err-message">Введіть CVV</span>
                   <label class="input-label input-label--tooltip input-label--cvv" for="input-cvv">
                     <span>CVV</span>
                     <span class="tooltip-wrapper">
@@ -108,6 +106,7 @@
                       <span class="tooltip-hidden tooltip-hidden--cvv">Прізвище та ім'я людини, на які випущена картка. Для іменних карт - нанесено на карту.</span>
                     </span>
                   </label>
+                  <span v-if="cardCvv === '' && isValidCardCvv === false" class="err-message">Введіть CVV</span>
                 </div>
               </div>
             </section>
